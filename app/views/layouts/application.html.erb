@@ -1,14 +1,70 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>TravelPlans</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html class="pc" lang="ja" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
+	<head>
+		<meta charset="utf-8">
+  		<title>Kuraitoko</title>
+  		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
 
-<%= yield %>
+	  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  	<%= csrf_meta_tags %>
+	</head>
 
-</body>
+	<body>
+
+		<header>
+			<div class="header_inner">
+				<div class="header_search">
+					<input class="search_input" placeholder="好きなプランを検索" type="text" name="q" autocomplete="off" ng-model="searchKeyword" ng-keyup="onKeyUp($event)" ng-focus="onFocus($event)" ng-blur="onBlur($event)">
+				</div>
+
+				<h1 class="logo">
+					<a href="/">Kuraitoko
+	        		<%#= image_tag("logo.png",:size=>"150x50",:alt=>"Kuraitoko") %>
+	        		</a>
+	      		</h1>
+
+	    		<div class="header_menu">
+	        		<div class="user_name">
+	        		</div>
+	        		<div class="new_plan">
+	        			<a href="/">プランを投稿する</a>
+	        		</div>
+	        		<a href="#" id="button">
+				        <span></span>
+				        <span></span>
+				        <span></span>
+				    </a>
+	        		<div class="menu_list">
+	        			<ul>
+	        			<!--
+			            <%# if user_signed_in? %>
+			              <li><%#= link_to 'マイページ',"/users/#{@currentuser.id}" %></li>
+			              <li><%#= link_to 'サインアウト',"/users/sign_out", method: :delete%></li>
+			              <li><%#= link_to '会員情報の変更',"/users/edit" %></li>
+			            <%# else %>
+			              <li><%#= link_to '新規登録', '/users/sign_up'%></li>
+			              <li><%#= link_to 'ログイン', '/users/sign_in'%></li>
+			            <%# end %>
+			            -->
+			          </ul>
+	        		</div>
+	        		<div class="overlay"></div>
+	     		</div>
+	     	</div>
+    	</header>
+
+
+    <div class="content">
+
+            <%= yield %>
+
+    </div>
+
+
+    <footer>
+      <p class="copyright">© Kuraitoko</p>
+    </footer>
+
+	</body>
 </html>
