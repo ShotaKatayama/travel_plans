@@ -1,89 +1,16 @@
 <div class="clearfix head_contents">
-	<div class="head_content">
-		<a href="/" title="ここにタイトルが入ります">
-			<div class="head_content_img">
-				<img src="https://d17vjxfu0igzun.cloudfront.net/images/2543d507a585b9cc457df1edcf5b6e8d/970/spot_photos/185722/original-a5b68abee239df7b99d6b161786bf06668cf0a78.jpeg" alt="">
-			</div>
-		</a>
-
-		<div class="head_content_box">
-			<div class="head_content_title">
-				<h2>ここにタイトルが入りますここにタイトルが入ります</h2>
-			</div>
-			<div class="clearfix head_content_tag">
-				<ul>
-					<li>タグ</li>
-					<li>タグ</li>
-					<li>タグ</li>
-				</ul>
-			</div>
-			<div class="clearfix head_content_footer">
-				<p class="head_content_view">
-					12156
-				</p>
-				<p class="head_content_username">
-					username
-				</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="head_content">
-		<a href="/" title="ここにタイトルが入ります">
-			<div class="head_content_img">
-				<img src="https://d17vjxfu0igzun.cloudfront.net/images/f4422d331c5c803315ffbc2d37bef2a1/970/spot_photos/188827/original-fca0087cd98bbd435c1a8a44c1b3606b6a8fb84c.JPG" alt="">
-			</div>
-		</a>
-
-		<div class="head_content_box">
-			<div class="head_content_title">
-				<h2>ここにタイトルが入りますここにタイトルが入ります</h2>
-			</div>
-			<div class="clearfix head_content_tag">
-				<ul>
-					<li>タグ</li>
-					<li>タグ</li>
-					<li>タグ</li>
-				</ul>
-			</div>
-			<div class="clearfix head_content_footer">
-				<p class="head_content_view">
-					12156
-				</p>
-				<p class="head_content_username">
-					username
-				</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="head_content">
-		<a href="/" title="ここにタイトルが入ります">
-			<div class="head_content_img">
-				<img src="https://d17vjxfu0igzun.cloudfront.net/images/0c7ec68a7d3e8cd878bb9e4e5b45e2d6/1360x1020c/spot_photos/16971/original-1080d26256555279573084a85a68b25a43f43084.jpg" alt="">
-			</div>
-		</a>
-
-		<div class="head_content_box">
-			<div class="head_content_title">
-				<h2>ここにタイトルが入りますここにタイトルが入ります</h2>
-			</div>
-			<div class="clearfix head_content_tag">
-				<ul>
-					<li>タグ</li>
-					<li>タグ</li>
-					<li>タグ</li>
-				</ul>
-			</div>
-			<div class="clearfix head_content_footer">
-				<p class="head_content_view">
-					12156
-				</p>
-				<p class="head_content_username">
-					username
-				</p>
-			</div>
-		</div>
-	</div>
-
+	<%= render partial: 'plans/searchContents' %>
 </div>
+
+<div class="main_wrap">
+	<ul class="plan_list">
+		<h2>新着プラン</h2>
+		<li>
+			<%= render partial: 'plans/planList' %>
+		</li>
+	</ul>
+
+	<div class="side_contents">
+	</div>
+</div>
+
